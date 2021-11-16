@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@android:style/ThemeOverlay.Material.Dark"
+    android:background="@android:color/background_dark"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="360dp"
+        android:layout_height="370dp"
+        android:layout_gravity="center"
+        android:background="@android:color/background_light">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="350dp"
+            android:layout_height="360dp"
+            android:layout_gravity="center"
+            android:background="@android:color/background_dark" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="40dp">
+
+        <Button
+            android:id="@+id/generationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_dark"
+            android:backgroundTint="#384C93"
+            android:text="Continue"
+            app:cornerRadius="20dp" />
+
+        <TextView
+            android:id="@+id/cellColorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Cell Color"
+            android:textSize="18sp" />
+
+        <com.divyanshu.colorseekbar.ColorSeekBar
+            android:id="@+id/cell_color_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp" />
+
+        <TextView
+            android:id="@+id/backgroundColorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Background Color"
+            android:textSize="18sp" />
+
+        <com.divyanshu.colorseekbar.ColorSeekBar
+            android:id="@+id/background_color_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:colorSeeds="@array/colors" />
+    </LinearLayout>
+
+</LinearLayout>
