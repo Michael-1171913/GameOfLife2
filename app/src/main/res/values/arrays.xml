@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer-array name="colors">
-        <item>1</item>
-        <item>100</item>
-        <item>1234</item>
-        <item>1234567</item>
-    </integer-array>
+    <array name="cell_colors">
+
+        <item>#CFDBD5</item>
+        <item>#F5CB5C</item>
+        <item>#E8EDDF</item>
+
+    </array>
+    <array name="bg_colors">
+
+        <item>#242423</item>
+        <item>#333533</item>
+        <item>#000000</item>
+
+    </array>
 </resources>

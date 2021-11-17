@@ -13,6 +13,7 @@
         android:layout_width="360dp"
         android:layout_height="370dp"
         android:layout_gravity="center"
+        android:layout_margin="20dp"
         android:background="@android:color/background_light">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -26,13 +27,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="40dp">
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/generationButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:background="@android:color/holo_red_dark"
             android:backgroundTint="#384C93"
             android:text="Continue"
@@ -50,7 +51,8 @@
             android:id="@+id/cell_color_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp" />
+            android:layout_margin="16dp"
+            app:colorSeeds="@array/cell_colors" />
 
         <TextView
             android:id="@+id/backgroundColorText"
@@ -65,7 +67,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            app:colorSeeds="@array/colors" />
+            app:colorSeeds="@array/bg_colors" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="Save pattern" />
+
+            <Button
+                android:id="@+id/loadButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="Load pattern" />
+
+            <ImageButton
+                android:id="@+id/cloneButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_baseline_content_copy_24" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
